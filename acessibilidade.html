@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inclusão e Acessibilidade - Tudo Sobre o ENEM</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #0073e6, #004a99);
+            color: #fff;
+        }
+        header {
+            background-color: #005bb5;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 28px;
+            margin: 0;
+            color: #fff;
+        }
+        .content {
+            padding: 20px;
+        }
+        .section {
+            background: rgba(255, 255, 255, 0.1);
+            margin: 20px 0;
+            padding: 15px;
+            border-radius: 8px;
+        }
+        .section h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .toggle-content {
+            display: none;
+            transition: all 0.3s ease;
+        }
+        .section button {
+            background-color: #0061cc;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .section button:hover {
+            background-color: #004a99;
+        }
+        footer {
+            background-color: #004a99;
+            text-align: center;
+            padding: 10px 20px;
+            color: #fff;
+            font-size: 14px;
+        }
+        .text-white {
+    color: #fff; 
+}
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html"><H1> <p class="text-white">Voltar para a Home </p> </H1></a>
+        <h1>Inclusão e Acessibilidade no ENEM</h1>
+    </header>
+    <div class="content">
+        <div class="section">
+            <h2>Atendimento Especializado</h2>
+            <div class="toggle-content">
+                <p>
+                    O ENEM oferece atendimento especializado para candidatos com deficiência, 
+                    transtornos globais do desenvolvimento ou outras condições de saúde.
+                </p>
+                <ul>
+                    <li>Prova em braille</li>
+                    <li>Tradutor de Libras</li>
+                    <li>Auxílio para leitura e escrita</li>
+                </ul>
+            </div>
+            <button onclick="toggleContent(this)">Saiba Mais</button>
+        </div>
+        <div class="section">
+            <h2>Materiais em Formatos Acessíveis</h2>
+            <div class="toggle-content">
+                <p>
+                    O site disponibiliza recursos adaptados para diferentes públicos:
+                </p>
+                <ul>
+                    <li>Textos em áudio</li>
+                    <li>Vídeos com intérprete de Libras</li>
+                    <li>Opção de alto contraste</li>
+                </ul>
+            </div>
+            <button onclick="toggleContent(this)">Saiba Mais</button>
+        </div>
+        <div class="section">
+            <h2>Solicitação de Atendimento</h2>
+            <div class="toggle-content">
+                <p>
+                    Saiba como solicitar atendimento especializado durante a inscrição no ENEM. 
+                    O processo exige laudo médico atualizado e envio por meio do sistema.
+                </p>
+            </div>
+            <button onclick="toggleContent(this)">Saiba Mais</button>
+        </div>
+    </div>
+    <footer>
+        <p>© 2024 - Tudo Sobre o ENEM. Todos os direitos reservados.</p>
+    </footer>
+    <script>
+        function toggleContent(button) {
+            const content = button.previousElementSibling;
+            content.style.display = content.style.display === "block" ? "none" : "block";
+            button.textContent = content.style.display === "block" ? "Fechar" : "Saiba Mais";
+        }
+    </script>
+</body>
+</html>
