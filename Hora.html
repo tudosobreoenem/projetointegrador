@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instruções para a Prova do ENEM</title>
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f1f5f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #005fa3;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        header a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            margin-top: 10px;
+            display: inline-block;
+            padding: 5px 10px;
+            border: 2px solid white;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+
+
+        main {
+            margin: 20px auto;
+            max-width: 1000px;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #005fa3;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #005fa3;
+            padding-bottom: 5px;
+        }
+
+        ul {
+            list-style: none;
+            margin: 20px 0;
+        }
+
+        ul li {
+            font-size: 1.2em;
+            margin-bottom: 15px;
+        }
+
+        .tips-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .tips-container div {
+            background-color: #e7f1fb;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .tips-container div:hover {
+            transform: scale(1.05);
+        }
+
+        .important-btn {
+            background-color: #ff5722;
+            color: white;
+            border: none;
+            width: 950px;
+            padding: 5px 5px;
+            font-size: 0.8em;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            display: inline-block;
+            margin-top: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .important-btn:hover {
+            background-color: #e64a19;
+        }
+
+        footer {
+            background-color: #005fa3;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        footer p {
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Instruções para a Prova do ENEM</h1>
+        <a href="index.html">Voltar para a Home</a> <!-- Link para a página inicial -->
+    </header>
+    
+    <main>
+        <h2>Cor Exigida da Caneta</h2>
+        <ul>
+            <li>Para realizar a prova, é obrigatório o uso de caneta esferográfica preta, fabricada com tinta indeleível.</li>
+            <li>Canetas de outras cores não são aceitas e podem invalidar sua prova.</li>
+            <li>Não é permitido o uso de caneta de tinta azul, vermelha ou qualquer outra cor, por isso tenha cuidado ao escolher a caneta.</li>
+        </ul>
+
+        <h2>O Que Levar para a Prova</h2>
+        <ul>
+            <li>Documento oficial com foto (RG, Passaporte, CNH, etc.)</li>
+            <li>Caneta esferográfica preta</li>
+            <li>Cartão de confirmação da inscrição</li>
+            <li>Água e alimentos leves, caso necessário</li>
+        </ul>
+
+        <h2>O Que É Proibido</h2>
+        <ul>
+            <li>Uso de qualquer tipo de celular ou dispositivo eletrônico durante a prova.</li>
+            <li>O uso de lápis, borracha, canetas de cores diferentes de preto, marca-textos e outros materiais proibidos.</li>
+            <li>Falar ou se comunicar com outros candidatos durante a prova.</li>
+            <li>Trazer alimentos ou bebidas que possam causar desconforto para outros candidatos (exemplo: alimentos com cheiro forte).</li>
+        </ul>
+
+        <h2>Dicas para a Prova</h2>
+        <div class="tips-container">
+            <div>
+                <h3>1. Conheça a Matriz do ENEM</h3>
+                <p>Estude conforme as áreas de conhecimento e habilidades exigidas pela matriz do ENEM.</p>
+            </div>
+            <div>
+                <h3>2. Organize seu Tempo</h3>
+                <p>Durante a prova, gerencie bem seu tempo, não deixe para o final as questões mais difíceis.</p>
+            </div>
+            <div>
+                <h3>3. Revise suas Respostas</h3>
+                <p>Se sobrar tempo, volte às questões mais difíceis e revise suas respostas.</p>
+            </div>
+        </div>
+
+        <h2>Táticas para uma Boa Prova</h2>
+        <ul>
+            <li>Respire profundamente e mantenha a calma. Isso ajuda a manter o foco e a concentração.</li>
+            <li>Leia cada questão com atenção, marcando as que você não souber e voltando nelas mais tarde.</li>
+            <li>Evite se distrair com o ambiente e os outros candidatos. Foco total na sua prova!</li>
+        </ul>
+
+        <button class="important-btn" onclick="showAlert()">Lembre-se: A Preparação é a Chave para o Sucesso!</button>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 ENEM - Todas as informações são fornecidas com base no regulamento oficial.</p>
+    </footer>
+
+    <script>
+        function showAlert() {
+            alert("Boa sorte na prova! Lembre-se de fazer o melhor e confiar no seu esforço. Você está preparado!");
+        }
+    </script>
+</body>
+</html>
+

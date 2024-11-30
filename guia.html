@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia de Inscrição no ENEM - Tudo Sobre o ENEM</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #0073e6, #004a99);
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #005bb5;
+            text-align: center;
+            padding: 15px;
+        }
+        header h1 {
+            font-size: 28px;
+        }
+        .container {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .step {
+            background-color: #0066cc;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            padding: 15px;
+            cursor: pointer;
+        }
+        .step h2 {
+            margin: 0;
+            font-size: 18px;
+        }
+        .step-content {
+            display: none;
+            margin-top: 10px;
+            background-color: #004a99;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #005bb5;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #003d7a;
+        }
+        .text-white {
+    color: #fff; 
+}
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html"><H1> <p class="text-white">Voltar para a Home </p> </H1></a>
+        <h1>Guia de Inscrição no ENEM</h1>
+    </header>
+    <div class="container">
+        <p>Para se inscrever no ENEM, siga este guia detalhado que explica cada etapa. Clique em uma etapa para expandir e visualizar os detalhes.</p>
+        
+        <div class="step" onclick="toggleStep(1)">
+            <h2>1. Acesse o Portal do INEP</h2>
+            <div class="step-content" id="step-1">
+                <p>Entre no site oficial do INEP (<a href="https://enem.inep.gov.br" target="_blank" style="color: #ffa500;">enem.inep.gov.br</a>). Certifique-se de que está em um dispositivo seguro com uma conexão confiável.</p>
+            </div>
+        </div>
+
+        <div class="step" onclick="toggleStep(2)">
+            <h2>2. Faça Login ou Crie uma Conta</h2>
+            <div class="step-content" id="step-2">
+                <p>Use seu CPF e senha para acessar o sistema. Caso seja sua primeira vez, clique em "Criar Conta" e preencha seus dados pessoais corretamente.</p>
+            </div>
+        </div>
+
+        <div class="step" onclick="toggleStep(3)">
+            <h2>3. Preencha Seus Dados</h2>
+            <div class="step-content" id="step-3">
+                <p>Preencha cuidadosamente suas informações pessoais, como nome completo, endereço, e-mail e telefone. Certifique-se de que tudo está correto.</p>
+            </div>
+        </div>
+
+        <div class="step" onclick="toggleStep(4)">
+            <h2>4. Escolha a Língua Estrangeira</h2>
+            <div class="step-content" id="step-4">
+                <p>Você deverá escolher entre inglês e espanhol como a língua estrangeira que será avaliada na prova.</p>
+            </div>
+        </div>
+
+        <div class="step" onclick="toggleStep(5)">
+            <h2>5. Pague a Taxa de Inscrição</h2>
+            <div class="step-content" id="step-5">
+                <p>Imprima o boleto gerado pelo sistema e efetue o pagamento dentro do prazo estipulado. Você também pode verificar a possibilidade de isenção de taxa.</p>
+            </div>
+        </div>
+
+        <div class="step" onclick="toggleStep(6)">
+            <h2>6. Confirme Sua Inscrição</h2>
+            <div class="step-content" id="step-6">
+                <p>Acesse o sistema novamente após o pagamento para verificar o status da sua inscrição. Ela só será confirmada após a validação do pagamento ou da solicitação de isenção.</p>
+            </div>
+        </div>
+
+        <button onclick="expandAll()">Expandir Tudo</button>
+        <button onclick="collapseAll()">Fechar Tudo</button>
+    </div>
+
+    <script>
+        function toggleStep(step) {
+            const content = document.getElementById(`step-${step}`);
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        }
+
+        function expandAll() {
+            for (let i = 1; i <= 6; i++) {
+                document.getElementById(`step-${i}`).style.display = "block";
+            }
+        }
+
+        function collapseAll() {
+            for (let i = 1; i <= 6; i++) {
+                document.getElementById(`step-${i}`).style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
