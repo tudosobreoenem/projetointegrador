@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulado ENEM 2023</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #e6f4ff; /* Fundo azul claro */
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background: linear-gradient(145deg, #ffffff, #cceeff);
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #004085; /* Azul escuro */
+            margin-bottom: 20px;
+        }
+
+        .question {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #f0faff; /* Fundo mais claro para destaque */
+            border: 1px solid #d0e7ff;
+            border-radius: 8px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .options {
+            display: flex;
+            gap: 10px;
+            padding-top: 10px;
+            justify-content: space-around;
+        }
+
+        .options label {
+            font-size: 1rem;
+            color: #004085;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .options label:hover {
+            color: #007bff; /* Azul vibrante ao passar o mouse */
+        }
+
+        input[type="radio"] {
+            margin-right: 5px;
+            transform: scale(1.2);
+            accent-color: #007bff; /* Azul personalizado */
+        }
+
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4);
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+
+        #results, #gabarito {
+            display: none;
+            margin-top: 20px;
+            padding: 15px;
+            background: #f8fbff;
+            border-radius: 8px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Simulado ENEM 2023</h1>
+        <CENTER><a href="index.html"><H3>Volte para a Home</H3></a></CENTER>
+        <center><a href="2023_PV_impresso_D1_CD1.pdf">Prova - Dia 1</a>
+                <a href="2023_PV_impresso_D2_CD7.pdf">Prova - Dia 2</a></center>
+        <div id="menu-buttons">
+            <button onclick="switchForm('form-dia1')">2023 - DIA 1 - INGLÊS</button>
+            <button onclick="switchForm('form-dia2')">2023 - DIA 2</button>
+        </div>
+
+        <form id="form-dia1" class="quiz-form">
+            <h2>Simulado DIA 1</h2>
+            <div id="questions-dia1" class="questions"></div>
+            <button type="button" onclick="submitQuiz('form-dia1', gabaritoDia1)">Verificar Respostas</button>
+        </form>
+
+        <form id="form-dia2" class="quiz-form" style="display: none;">
+            <h2>Simulado DIA 2</h2>
+            <div id="questions-dia2" class="questions"></div>
+            <button type="button" onclick="submitQuiz('form-dia2', gabaritoDia2)">Verificar Respostas</button>
+        </form>
+
+        <div id="results"></div>
+        <div id="gabarito"></div>
+    </div>
+
+    <script>
+        const gabaritoDia1 = ["B", "B", "D", "A", "B", "D", "A", "C", "E", "E",
+            "D", "C", "C", "D", "B", "A", "D", "B", "D", "E",
+            "D", "C", "C", "E", "B", "C", "A", "C", "E", "A",
+            "C", "A", "A", "C", "A", "A", "C", "A", "C", "B",
+            "B", "E", "A", "A", "E", "C", "D", "A", "E", "E",
+            "C", "A", "B", "A", "A", "C", "E", "A", "A", "D",
+            "E", "C", "B", "D", "A", "A", "B", "C", "D", "C",
+            "A", "B", "A", "D", "C", "D", "E", "A", "B", "A",
+            "A", "B", "C", "D", "D", "E", "B", "A", "D", "B"];
+            
+        const gabaritoDia2 = ["D", "B", "E", "A", "B", "D", "A", "B", "D", "C",
+            "A", "C", "D", "B", "E", "C", "D", "D", "D", "B",
+            "C", "A", "A", "A", "B", "B", "A", "C", "C", "C",
+            "A", "D", "E", "B", "E", "C", "C", "C", "E", "D",
+            "A", "E", "E", "E", "D", "B", "C", "C", "D", "E",
+            "E", "A", "B", "C", "B", "E", "D", "C", "E", "A",
+            "B", "B", "E", "B", "D", "A", "B", "D", "D", "A",
+            "D", "D", "A", "A", "E", "C", "A", "A", "D", "D",
+            "C", "C", "B", "E", "B", "E", "A", "B", "C", "C"];
+
+        function generateQuestions(formId, gabarito) {
+            const questionsDiv = document.getElementById(formId);
+            gabarito.forEach((_, index) => {
+                const questionHTML = `
+                    <div class="question">
+                        <label>Questão ${index + 1}:</label>
+                        <div class="options">
+                            ${['A', 'B', 'C', 'D', 'E'].map(option => `
+                                <label>
+                                    <input type="radio" name="question${index + 1}" value="${option}">${option}
+                                </label>`).join('')}
+                        </div>
+                    </div>`;
+                questionsDiv.innerHTML += questionHTML;
+            });
+        }
+
+        function switchForm(formId) {
+            document.querySelectorAll('.quiz-form').forEach(form => {
+                form.style.display = 'none';
+            });
+            document.getElementById(formId).style.display = 'block';
+            document.getElementById('results').style.display = 'none';
+            document.getElementById('gabarito').style.display = 'none';
+        }
+
+        function submitQuiz(formId, gabarito) {
+            const form = document.getElementById(formId);
+            const answers = Array.from(form.querySelectorAll('input:checked')).map(input => input.value);
+            const correctAnswers = gabarito.filter((answer, index) => answers[index] === answer).length;
+
+            document.getElementById('results').style.display = 'block';
+            document.getElementById('results').innerHTML = `<h3>Você acertou ${correctAnswers} de ${gabarito.length} questões.</h3>`;
+            document.getElementById('gabarito').style.display = 'block';
+            document.getElementById('gabarito').innerHTML = `
+                <h3>Gabarito:</h3>
+                <p>${gabarito.map((answer, index) => `Questão ${index + 1}: ${answer}`).join('<br>')}</p>`;
+        }
+
+        // Gerar questões para ambos os formulários
+        generateQuestions('questions-dia1', gabaritoDia1);
+        generateQuestions('questions-dia2', gabaritoDia2);
+    </script>
+</body>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dicas para Redação do ENEM</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #0066cc, #004c99);
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            background-color: #004a99;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header img {
+            height: 150px;
+            width: auto;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 36px;
+            text-align: center;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        section {
+            background-color: #fff;
+            color: #333;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #2c3e50;
+            font-size: 28px;
+            text-align: center;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            background-color: #ecf0f1;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        li:hover {
+            transform: scale(1.05);
+            background-color: #d0e3f1;
+        }
+
+        .tip strong {
+            color: #0066cc;
+        }
+
+        .video {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        iframe {
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+        }
+
+        footer {
+            background-color: #2c3e50;
+            text-align: center;
+            padding: 10px;
+            color: #fff;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+            display: block;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #004c99;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">
+            <img src="flavisson.jpg" alt="Logo Tudo Sobre o ENEM">
+        </a>
+    </header>
+
+    <div class="container">
+        <h1>Dicas para a Redação do ENEM</h1>
+
+        <section>
+            <h2>Introdução</h2>
+            <p>A redação do ENEM é uma das partes mais importantes da prova e exige preparação. A seguir, você encontrará dicas essenciais para se sair bem nessa etapa do exame.</p>
+        </section>
+
+        <section>
+            <h2>Principais Dicas para a Redação</h2>
+            <ul>
+                <li class="tip" onclick="toggleTip(1)">
+                    <strong>1. Compreenda bem o tema:</strong> Leia com atenção o tema da redação e as orientações que vêm no enunciado.
+                    <div class="tip-details" id="tip-1">
+                        <p>A clareza no entendimento é fundamental para um bom desenvolvimento.</p>
+                    </div>
+                </li>
+                <li class="tip" onclick="toggleTip(2)">
+                    <strong>2. Organize suas ideias:</strong> Antes de começar a escrever, faça um rascunho.
+                    <div class="tip-details" id="tip-2">
+                        <p>Isso ajuda a estruturar a redação e a não perder o foco.</p>
+                    </div>
+                </li>
+                <li class="tip" onclick="toggleTip(3)">
+                    <strong>3. Faça uma introdução clara:</strong> Na introdução, apresente o tema.
+                    <div class="tip-details" id="tip-3">
+                        <p>Evite divagações e vá direto ao ponto.</p>
+                    </div>
+                </li>
+                <li class="tip" onclick="toggleTip(4)">
+                    <strong>4. Desenvolva o conteúdo de forma lógica:</strong> Articule suas ideias com conectivos.
+                    <div class="tip-details" id="tip-4">
+                        <p>Isso garantirá a fluidez do texto e a coerência.</p>
+                    </div>
+                </li>
+                <li class="tip" onclick="toggleTip(5)">
+                    <strong>5. Apresente argumentos sólidos:</strong> Utilize dados e fatos para reforçar seu ponto de vista.
+                    <div class="tip-details" id="tip-5">
+                        <p>Evite opiniões vagas e busque sempre a fundamentação.</p>
+                    </div>
+                </li>
+                <li class="tip" onclick="toggleTip(6)">
+                    <strong>6. Proposta de intervenção:</strong> Tenha uma solução prática e explicada para o problema.
+                    <div class="tip-details" id="tip-6">
+                        <p>A proposta deve ser viável e clara para ser bem avaliada.</p>
+                    </div>
+                </li>
+                <li class="tip" onclick="toggleTip(7)">
+                    <strong>7. Revise sua redação:</strong> Revise para verificar ortografia, gramática e pontuação.
+                    <div class="tip-details" id="tip-7">
+                        <p>Revisões podem fazer uma grande diferença na nota final.</p>
+                    </div>
+                </li>
+                <li class="tip" onclick="toggleTip(8)">
+                    <strong>8. Atenção à conclusão:</strong> Reforce a proposta de intervenção na conclusão.
+                    <div class="tip-details" id="tip-8">
+                        <p>A conclusão deve ser breve, mas marcante.</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <div class="video">
+            <center>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=uOmvwONmL_FN2586&amp;list=PLVyIxkvuIqxowrHHXhzfuBcEjNTNVhUMH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </center>
+        </div>
+
+        <hr>
+
+        <footer>
+            <p>&copy; 2024 - Tudo Sobre o ENEM. Todos os direitos reservados.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Toggle a dica quando clicar
+        function toggleTip(tipNumber) {
+            var tip = document.getElementById('tip-' + tipNumber);
+            if (tip.style.display === 'none' || tip.style.display === '') {
+                tip.style.display = 'block';
+            } else {
+                tip.style.display = 'none';
+            }
+        }
+
+        // Inicializar todas as dicas como ocultas
+        document.querySelectorAll('.tip-details').forEach(function (tip) {
+            tip.style.display = 'none';
+        });
+    </script>
+
+</body>
+</html>

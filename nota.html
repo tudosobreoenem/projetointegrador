@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Como Submeter sua Nota - SiSU, ProUni e FIES</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #0073e6, #005bb5);
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #003d80;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header img {
+            height: 150px;
+            width: auto;
+            border-radius: 8px;
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            color: #333;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 36px;
+            text-align: center;
+            font-weight: bold;
+            color: #003d80;
+        }
+
+        h2 {
+            font-size: 28px;
+            color: #003d80;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .section {
+            margin-top: 30px;
+        }
+
+        .step {
+            background-color: #ecf7ff;
+            padding: 20px;
+            margin: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .step h3 {
+            margin-top: 0;
+            color: #0073e6;
+        }
+
+        .step button {
+            background-color: #003d80;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 15px;
+        }
+
+        .step button:hover {
+            background-color: #005bb5;
+        }
+
+        .faq {
+            background-color: #f0f8ff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .faq h3 {
+            color: #003d80;
+        }
+
+        .faq ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .faq li {
+            margin-bottom: 10px;
+        }
+
+        .faq li span {
+            font-weight: bold;
+            color: #0073e6;
+            cursor: pointer;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #003d80;
+            color: white;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .simulate-section {
+            background-color: #ecf7ff;
+            padding: 20px;
+            margin-top: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .simulate-section label {
+            font-size: 18px;
+            margin-right: 15px;
+        }
+
+        .simulate-section input {
+            padding: 10px;
+            font-size: 16px;
+            margin-top: 10px;
+            border-radius: 5px;
+            width: 100%;
+        }
+
+        .result {
+            background-color: #e6f7ff;
+            padding: 10px;
+            margin-top: 20px;
+            border-radius: 5px;
+            font-size: 18px;
+            color: #0073e6;
+        }
+        
+.button {
+    background-color: #0073e6;
+    color: #fff; 
+    padding: 12px 20px; 
+    font-size: 16px; 
+    font-weight: bold; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; 
+}
+
+
+.button:hover {
+    background-color: #005bb5; 
+    transform: scale(1.1); 
+}
+
+.text-white {
+    color: #fff; 
+}
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html"><H1> <p class="text-white">Voltar para a Home </p> </H1></a>
+    </header>
+
+    <div class="container">
+        <h1>Como Submeter Sua Nota - SiSU, ProUni e FIES</h1>
+
+        <!-- Introdução -->
+        <section class="section">
+            <h2>Introdução</h2>
+            <p>Após realizar a prova do ENEM, sua nota pode ser utilizada para se inscrever em diversos programas educacionais. Aqui, vamos ensinar como submeter sua nota para o SiSU, ProUni e FIES.</p>
+        </section>
+
+        <!-- Passo a Passo para Submeter a Nota -->
+        <section class="section">
+            <h2>Passo a Passo para Submeter sua Nota</h2>
+
+            <!-- SiSU -->
+            <div class="step" id="sisu">
+                <h3>1. Sistema de Seleção Unificada (SiSU)</h3>
+                <p>O SiSU oferece vagas em universidades públicas. Para se inscrever, siga os passos abaixo:</p>
+                <ul>
+                    <li>1. Acesse o site oficial do <a href="https://sisu.mec.gov.br/" target="_blank">SiSU</a>.</li>
+                    <li>2. Faça login com seu CPF e a senha cadastrada no sistema do ENEM.</li>
+                    <li>3. Escolha as opções de curso e universidade.</li>
+                    <li>4. Insira sua nota do ENEM para concorrer às vagas.</li>
+                    <li>5. Acompanhe os resultados e a nota de corte durante o período de inscrição.</li>
+                </ul>
+                <button onclick="showMoreInfo('sisu')">Saiba Mais</button>
+                <div class="more-info" id="info-sisu" style="display:none;">
+                    <p>O SiSU funciona por meio de um processo seletivo com duas edições anuais. Fique atento aos prazos de inscrição, que são divulgados no início do ano.</p>
+                </div>
+            </div>
+
+            <!-- ProUni -->
+            <div class="step" id="prouni">
+                <h3>2. Programa Universidade para Todos (ProUni)</h3>
+                <p>O ProUni oferece bolsas de estudo em universidades privadas. Veja como se inscrever:</p>
+                <ul>
+                    <li>1. Acesse o site do <a href="https://prouniportal.mec.gov.br/" target="_blank">ProUni</a>.</li>
+                    <li>2. Faça login com seu CPF e senha do ENEM.</li>
+                    <li>3. Escolha as opções de curso e instituição de ensino.</li>
+                    <li>4. Insira a sua nota do ENEM para concorrer à bolsa de estudo.</li>
+                    <li>5. Acompanhe os resultados e verifique se você foi selecionado.</li>
+                </ul>
+                <button onclick="showMoreInfo('prouni')">Saiba Mais</button>
+                <div class="more-info" id="info-prouni" style="display:none;">
+                    <p>O ProUni exige que o candidato tenha uma renda familiar específica para se inscrever. Certifique-se de cumprir todos os requisitos antes de se inscrever.</p>
+                </div>
+            </div>
+
+            <!-- FIES -->
+            <div class="step" id="fies">
+                <h3>3. Fundo de Financiamento Estudantil (FIES)</h3>
+                <p>O FIES financia o custo das mensalidades de cursos superiores em instituições privadas. Para se inscrever, siga as etapas:</p>
+                <ul>
+                    <li>1. Acesse o site do <a href="http://fies.mec.gov.br/" target="_blank">FIES</a>.</li>
+                    <li>2. Faça login com seu CPF e a senha do ENEM.</li>
+                    <li>3. Escolha o curso desejado e a instituição de ensino.</li>
+                    <li>4. Submeta sua nota do ENEM.</li>
+                    <li>5. Acompanhe o processo de seleção e assinatura do contrato de financiamento.</li>
+                </ul>
+                <button onclick="showMoreInfo('fies')">Saiba Mais</button>
+                <div class="more-info" id="info-fies" style="display:none;">
+                    <p>O FIES exige que você tenha uma renda familiar compatível com o financiamento. Confira as condições e documentos necessários antes de se inscrever.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Simulador de Pontuação -->
+        <section class="simulate-section">
+            <h2>Simulador de Pontuação</h2>
+            <p>Calcule sua pontuação no ENEM para saber suas chances nos programas!</p>
+            <label for="linguagens">Nota Linguagens:</label>
+            <input type="number" id="linguagens" placeholder="Digite sua nota em Linguagens">
+            <label for="humanas">Nota Ciências Humanas:</label>
+            <input type="number" id="humanas" placeholder="Digite sua nota em Ciências Humanas">
+            <label for="matematica">Nota Matemática:</label>
+            <input type="number" id="matematica" placeholder="Digite sua nota em Matemática">
+            <label for="natureza">Nota Redação:</label>
+            <input type="number" id="redacao" placeholder="Digite sua nota em Redação">
+            <label for="natureza">Nota Ciências da Natureza:</label>
+            <input type="number" id="natureza" placeholder="Digite sua nota em Ciências da Natureza">
+            <center><button onclick="calculateTotal()">Calcular Média</button></center>
+
+            <div class="result" id="result" style="display:none;">
+                <p>Sua média simples é: <span id="total"></span></p>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="faq">
+            <h3>Perguntas Frequentes</h3>
+            <ul>
+                <li><span onclick="toggleFAQ('faq1')">Como funciona a nota de corte no SiSU?</span>
+                    <div id="faq1" style="display:none;">
+                        <p>A nota de corte varia de acordo com o curso e a instituição. Ela é calculada com base na pontuação dos candidatos que se inscreveram no curso.</p>
+                    </div>
+                </li>
+                <li><span onclick="toggleFAQ('faq2')">Qual a renda exigida para o ProUni?</span>
+                    <div id="faq2" style="display:none;">
+                        <p>O ProUni exige que o candidato tenha uma renda familiar per capita de até 1,5 salário mínimo para bolsas integrais e até 3 salários mínimos para bolsas parciais.</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 - Tudo Sobre o ENEM. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        // Função para mostrar mais informações sobre cada método
+        function showMoreInfo(method) {
+            var info = document.getElementById('info-' + method);
+            if (info.style.display === 'none') {
+                info.style.display = 'block';
+            } else {
+                info.style.display = 'none';
+            }
+        }
+
+        // Função para calcular a pontuação total do ENEM
+        function calculateTotal() {
+            var linguagens = parseFloat(document.getElementById('linguagens').value) || 0;
+            var humanas = parseFloat(document.getElementById('humanas').value) || 0;
+            var matematica = parseFloat(document.getElementById('matematica').value) || 0;
+            var natureza = parseFloat(document.getElementById('natureza').value) || 0;
+            var redacao = parseFloat(document.getElementById('redacao').value) || 0;
+            var total = (linguagens + humanas + matematica + natureza + redacao)/5;
+
+            document.getElementById('total').textContent = total;
+            document.getElementById('result').style.display = 'block';
+        }
+
+        // Função para exibir/ocultar respostas das perguntas frequentes
+        function toggleFAQ(faq) {
+            var faqElement = document.getElementById(faq);
+            if (faqElement.style.display === 'none') {
+                faqElement.style.display = 'block';
+            } else {
+                faqElement.style.display = 'none';
+            }
+        }
+    </script>
+
+</body>
+</html>
+

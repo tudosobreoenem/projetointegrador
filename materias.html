@@ -1,102 +1,97 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Matérias</title>
-	<link rel="stylesheet" href="assets/css/main.css" />
-	<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-</head>
-<body>
-	<a href="index.html" class="logo">
-<center><img src="flavisson.jpg" alt="" height="150px" width="auto"/> </center>
-	</a>
-
-	<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Matérias Escolares</title>
-    <link rel="stylesheet" href="styles.css">
-   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> 
+    <title>Hub de Matérias</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f9f9f9;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        header {
+            background: linear-gradient(135deg, #0066cc, #00ccff);
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            width: 100%;
+        }
+        header h1 {
+            font-size: 2.5rem;
+            margin: 0;
+        }
+        nav {
+            margin: 20px 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        nav a {
+            display: block;
+            background: #0066cc;
+            color: #fff;
+            text-decoration: none;
+            margin: 10px;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            border-radius: 8px;
+            transition: background 0.3s, transform 0.2s;
+        }
+        nav a:hover {
+            background: #004080;
+            transform: scale(1.05);
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #004080;
+            color: #fff;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
 </head>
 <body>
-<br>
-<br>
-<br>
-
-    <header>
-       <center> <h1>Matérias Escolares que mais caem no ENEM.</h1> </center>
-        
+        <header class="fade-in">
+                      
+        <h1>Hub de Matérias</h1>
+        <p>Escolha uma matéria para explorar:<br> <br> Os gráficos mostrarão o número de questões que cada tópico ocupou nas últimas provas do ENEM</p>
     </header>
+    <br><br><br><br><br>
+    <nav>
+        <a href="matematica.html">Matemática</a>
+        <a href="historia.html">História</a>
+        <a href="geografia.html">Geografia</a>
+        <a href="sociologia.html">Sociologia</a>
+        <a href="filosofia.html">Filosofia</a>
+        <a href="linguagens.html">Linguagens</a>
+        <a href="ingles.html">Inglês</a>
+        <a href="espanhol.html">Espanhol</a>
+        <a href="biologia.html">Biologia</a>
+        <a href="quimica.html">Química</a>
+        <a href="fisica.html">Física</a>
+    </nav>
+    <br><br><br><br><br>
     
-    <main>
-        <section id="matematica">
-			<center><img src="images/matematica.png" width="1700px"  height="1000px"/></center>
-        </section>
-        <br>
-		<br>
-
-        <section id="portugues">      
-                <center><img src="images/portugues.png" width="1700px"  height="1000px"/></center>
-        </section> 
-<br>
-<br>
-
-        <section id="biologia">
-                <center><img src="images/biologia.png"  width="1700px"  height="1000px"/></center>
-        </section>
-<br>
-<br>
-
-        <section id="quimica">
-                <center><img src="images/quimica.png"  width="1700px"  height="1000px"/></center>
-        </section>
-<br>
-<br>
-
-		<section id="fisica">
-			<center><img src="images/fisica.png"  width="1700px"  height="1000px"/></center>
-        </section>
-<br>
-<br>
-
-		<section id="historia">
-
-			<center><img src="images/historia.png"  width="1700px"  height="1000px"/></center>
-        </section>
-<br>
-<br>
-
-		<section id="geografia">
-
-			<center><img src="images/geografia.png"  width="1700px"  height="1000px"/></center>
-        </section>
-<br>
-<br>
-
-		<section id="filosofia">
-			<center><img src="images/filosofia.png"  width="1700px"  height="1000px"/></center>
-        </section>
-<br>
-<br>
-
-		<section id="sociologia">
-			<center><img src="images/sociologia.png"  width="1700px"  height="1000px"/></center>
-        </section>
-<br>
-<br>
-
-    </main>
-
+    <a href="index.html"><H1>Volte para a Home</H1></a>
     <footer>
-        <p>&copy; 2024 Escola Virtual</p>
+        &copy; 2024 - Hub de Matérias | Todos os direitos reservados.
     </footer>
-
-    <script src="script.js"></script>
-</body>
-</html>
-
 </body>
 </html>
